@@ -26,9 +26,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", function (request, response) {
-  response.sendFile(__dirname + "/index.html");
-});
+// app.get("/", function (request, response) {
+//   response.sendFile(__dirname + "/index.html");
+// });
 
 // show all
 app.get("/messages", function (req, res) {
