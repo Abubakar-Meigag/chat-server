@@ -15,7 +15,16 @@ app.use(cors());
 //We will start with one message in the array.
 //Note: messages will be lost when Glitch restarts our server.
 
-const messages = [];
+// Function to reset messages array
+function resetMessages() {
+  messages = [];
+}
+
+// Middleware to reset messages array on server restart
+app.use((req, res, next) => {
+  resetMessages();
+  next();
+});
 
 app.get("/", function (request, response) {
   response.sendFile(__dirname + "/index.html");
