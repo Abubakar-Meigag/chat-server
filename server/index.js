@@ -17,9 +17,9 @@ app.use(cors());
 
 let messages = [];
 
-// app.get("/", function (request, response) {
-//   response.sendFile(__dirname + "/index.html");
-// });
+app.get("/", function (request, response) {
+  response.sendFile(__dirname + "/index.html");
+});
 
 // show all
 app.get("/messages", function (req, res) {
