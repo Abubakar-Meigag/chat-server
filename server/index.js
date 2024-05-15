@@ -17,17 +17,6 @@ app.use(cors());
 
 let messages = [];
 
-// Function to reset messages array
-function resetMessages() {
-  messages = [];
-}
-
-// Middleware to reset messages array on server restart
-app.use((req, res, next) => {
-  resetMessages();
-  next();
-});
-
 // app.get("/", function (request, response) {
 //   response.sendFile(__dirname + "/index.html");
 // });
