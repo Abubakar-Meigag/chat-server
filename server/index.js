@@ -15,6 +15,8 @@ app.use(cors());
 //We will start with one message in the array.
 //Note: messages will be lost when Glitch restarts our server.
 
+let messages = [];
+
 // Function to reset messages array
 function resetMessages() {
   messages = [];
